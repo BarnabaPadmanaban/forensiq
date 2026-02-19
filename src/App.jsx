@@ -11,7 +11,7 @@ pdfjsLib.GlobalWorkerOptions.workerSrc = new URL(
    OLLAMA API
 ══════════════════════════════════════════════════════ */
 async function callAI(systemPrompt, userPrompt) {
-  const res = await fetch("http://localhost:3001/api/gemini", {
+  const res = await fetch("https://forensiq-backend-gpez.onrender.com/api/gemini", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ systemPrompt, prompt: userPrompt }),
